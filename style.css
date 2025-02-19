@@ -1,0 +1,41 @@
+body{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container{
+    background-color: white;
+ padding: 1rem;
+    border-radius: 15px ;
+}
+h5{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#QRtext{
+    width: 200px;
+    margin-left: 0.4rem;
+    height: 25px;
+    border-radius: 5px;
+    padding-left: 0.5rem;
+}
+input[type="submit"]{
+    width: 213px;
+    height:28px;
+    margin-left: 0.4rem;
+    background-color: rgb(153, 239, 211);
+    border: none;
+    border-radius: 2px;
+}
+input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: white;
+    color: rgb(153, 239, 211);
+    transition: 0.7s;
+    border: 1px solid rgb(153, 239, 211);
+}
+.image{
+    margin-left: 2.4rem;
+}

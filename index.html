@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Login</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/314/314454.png">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+
+        .logo img {
+            width: 40px;
+            margin-left: 4rem;
+        }
+
+        .container {
+            background-color: white;
+            padding: 3rem;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 0.5rem;
+
+        }
+
+        label {
+            font-size: 13px;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            font-size: 10px;
+            margin-left: 4rem;
+            background-color: rgba(72, 72, 231, 0.727);
+            color: aliceblue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: blue;
+        }
+
+        p {
+            font-size: 9px;
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/314/314454.png" alt="">
+        </div><br>
+        <div class="textfeild">
+            <input type="text" id="user" placeholder="Enter your name" required><br><br>
+            <input type="password" name="" id="pw" placeholder="Enter password">
+            <br>
+            <p id="Worng">Name and password Worng</p>
+            <input type="checkbox" name="" id="" onclick="showpassword()">
+            <label for="">show password</label><br><br>
+            <input type="submit" value="Login" onclick="join()">
+        </div>
+    </div>
+</body>
+<script>
+    function showpassword() {
+        var showpw = document.getElementById("pw");
+        var Worng = document.getElementById("Worng");
+        if (showpw.type == 'password') {
+            showpw.type = 'text';
+        } else {
+            showpw.type = 'password';
+        }
+    }
+    function join() {
+        var user = document.getElementById("user");
+        var pw = document.getElementById("pw");
+        if (user.value == "Admin" && pw.value == "1234") {
+            window.location.href = "index2.html";
+        } else {
+            Worng = document.getElementById("Worng").style.display = "block";
+        }
+    }
+</script>
+</html>

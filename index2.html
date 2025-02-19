@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Or URL Generate to QR</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/314/314454.png">
+
+</head>
+<body>
+    <div class="container">
+        <h5>
+            Generate QR Code
+        </h5>
+        <div class="text">
+            <input type="text" placeholder="Enter Text or URL" id="QRtext">
+        </div>
+        <div class="image">
+            <img src="" alt="" id="Qrimg">
+        </div>
+        <div class="btn">
+            <input type="submit" value="Generate to QR" onclick="generate()">
+        </div>
+    </div>
+</body>
+<script>
+    function generate() {
+
+        let QRtext = document.getElementById("QRtext");
+        let Qrimg = document.getElementById("Qrimg");
+        Qrimg.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + QRtext.value;
+    }
+</script>
+
+</html>
